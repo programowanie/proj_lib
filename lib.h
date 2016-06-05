@@ -3,26 +3,35 @@
 
 using namespace std;
 
+
 class Player
 {	
 	string _name;
-	int _sobriety, _accuracy, _speed, _agility;
+	int _sobriety, _accuracy, _canFilling, _drinkingSpeed;
+
+	static string namesOne[5];
+	static string namesTwo[5];
+	static int _counter;
 
 public:
 
 	Player();
+
 	//getery
 	string name(){return _name;};
 	int sobriety(){return _sobriety;};
 	int accuracy(){return _accuracy;};
-	int speed(){return _speed;};
-	int agility(){return _agility;};
+	int canFilling(){return _canFilling;};
+	int drinkingSpeed(){return _drinkingSpeed;};
+	
 	//setery
 	void setSobriety(int newSobriety);
 	void setAccuracy(int newAccuracy);
-	void setSpeed(int newSpeed);
-	void setAgility(int newAgility);
+	void setCanFilling(int newCanFilling);
+
+	void showStatistics();
 
 };
 
-Player game(Player*, Player*); //przyjmie dwoch graczy i wykona symulacje
+//przyjmie dwoch graczy i wykona symulacje
+Player* game(Player*, Player*); 

@@ -1,2 +1,4 @@
 all:
-		g++ *.cpp -std=c++0x -o proj_lib
+		g++ *.cpp -std=c++0x -o libacja
+
+		./libacja 3
