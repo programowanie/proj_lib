@@ -1,13 +1,11 @@
 #include "lib.h"
 #include <iostream>
-#include <stdlib.h>
-#include <time.h>
+
+using namespace std;
 
 int main(int argc, char* argv[])
 {	
-	long int _seedValue = atoi(argv[1]);
-	long int* seedValue = &_seedValue;
-	srand(time(seedValue));
+	srand((argc == 2) ? atoi(argv[1]) : time(NULL));
 
 	Player firstPlayer = Player();
 	Player secondPlayer = Player();
